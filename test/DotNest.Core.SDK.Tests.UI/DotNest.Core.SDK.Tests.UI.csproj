@@ -22,4 +22,10 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\DotNest.Core.SDK.Web\DotNest.Core.SDK.Web.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update=".htmlvalidate.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
