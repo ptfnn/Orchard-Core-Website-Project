@@ -15,6 +15,5 @@ public class BasicOrchardFeaturesTests : UITestBase
 
     [Fact]
     public Task BasicOrchardFeaturesShouldWork() =>
-        ExecuteTestAfterSetupAsync(
-            context => context.TestBasicOrchardFeaturesExceptRegistrationAsync(Recipes.DefaultRecipeId));
+        ExecuteTestAsync(context => context.TestBasicOrchardFeaturesExceptRegistrationAsync(Recipes.DefaultRecipeId));
 }
