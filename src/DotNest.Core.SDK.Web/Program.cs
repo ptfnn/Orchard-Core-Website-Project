@@ -14,7 +14,6 @@ builder.Services
     .AddOrchardCms(orchardCoreBuilder =>
         orchardCoreBuilder
             .AddDatabaseShellsConfigurationIfAvailable(configuration)
-            .ConfigureSmtpSettings(overrideAdminSettings: false)
             .EnableAutoSetupIfNotUITesting(configuration)
             .HideRecipesByTagsFromSetup("test", "HideFromSetupScreen"));
 
@@ -22,7 +21,7 @@ var app = builder.Build();
 
 app.UseStaticFiles();
 app.UseOrchardCore();
-app.Run();
+await app.RunAsync();
 
 [SuppressMessage(
     "Design",
