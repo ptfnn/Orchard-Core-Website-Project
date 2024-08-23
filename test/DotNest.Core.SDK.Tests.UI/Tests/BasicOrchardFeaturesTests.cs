@@ -1,5 +1,5 @@
 using DotNest.Core.SDK.Tests.UI.Constants;
-using Lombiq.Tests.UI.Extensions;
+using Lombiq.Tests.UI.BasicOrchardFeaturesTesting;
 using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
@@ -15,6 +15,5 @@ public class BasicOrchardFeaturesTests : UITestBase
 
     [Fact]
     public Task BasicOrchardFeaturesShouldWork() =>
-        ExecuteTestAsync(
-            context => context.TestBasicOrchardFeaturesExceptRegistrationAsync(Recipes.DefaultRecipeId));
+        ExecuteTestAsync(context => context.TestBasicOrchardFeaturesExceptRegistrationAsync(Recipes.DefaultRecipeId));
 }

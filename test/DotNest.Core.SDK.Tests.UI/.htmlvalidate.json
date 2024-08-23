@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "./default.htmlvalidate.json"
+  ],
+
+  "rules": {
+    "prefer-native-element": "off"
+  },
+
+  "root": true
+}
